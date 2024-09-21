@@ -1,4 +1,4 @@
-name: Stocks-Backend
+name: DjangoApp
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -9,6 +9,7 @@ on:
   push:
     paths: 
       - 'django_app/**'
+  workflow_dispatch:
 
 
 env:
