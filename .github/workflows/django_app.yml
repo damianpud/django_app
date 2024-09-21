@@ -56,6 +56,12 @@ jobs:
       - name: Add environment variables to .env
         run: |
           echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> .env
+          echo "SQL_ENGINE=${{ secrets.SQL_ENGINE }}" >> .env          
+          echo "SQL_DATABASE=${{ secrets.SQL_DATABASE }}" >> .env
+          echo "SQL_USER=${{ secrets.SQL_USER }}" >> .env
+          echo "SQL_PASSWORD=${{ secrets.SQL_PASSWORD }}" >> .env
+          echo "SQL_HOST=${{ secrets.SQL_HOST }}" >> .env
+          echo "SQL_PORT=${{ secrets.SQL_PORT }}" >> .env
 
       - name: Build and push Docker image
         id: build-and-push
