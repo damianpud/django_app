@@ -1,7 +1,7 @@
-from rest_framework.throttling import AnonRateThrottle
+from rest_framework.throttling import UserRateThrottle
 
 
-class CustomRateThrottle(AnonRateThrottle):
+class CustomRateThrottle(UserRateThrottle):
     def allow_request(self, request, view):
         if request.headers.get('apikey') == 'rekrutacja2024':
             return True
